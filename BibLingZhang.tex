@@ -1,16 +1,26 @@
+% !TeX program = lualatex
 \documentclass[letterpaper]{article}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
- \usepackage[utf8x]{inputenc}
- \usepackage[numbers]{natbib}
- \usepackage{amsmath, amssymb, amsthm}
- \usepackage[usenames, dvipsnames]{xcolor}
+\usepackage[utf8x]{inputenc}
+\usepackage[numbers]{natbib}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[usenames, dvipsnames]{xcolor}
+\usepackage[
+hashEnumerators,
+definitionLists,
+footnotes,
+smartEllipses,
+]{markdown}
 
- \title{Ling Zhang Paper Reading Record}
+\title{Ling Zhang Paper Reading Record}
 \author{Ling Zhang}
- \begin{document}
-\maketitle
- \input{LingZhangRef2018}
 
+\begin{document}
+\maketitle
+\input{LingZhangRef2018}
+\input{LingZhangDissertation}
+
+\newpage
 \bibliographystyle{unsrtnat}
 \bibliography{BibLingZhang} % refers to example.bib
- \end{document}
+\end{document}

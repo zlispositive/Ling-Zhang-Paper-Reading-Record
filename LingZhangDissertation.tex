@@ -1,0 +1,179 @@
+\section{Dissertation Literature Review}
+We will include the review of the following stream of literature, ordered by priority.
+\begin{itemize}
+    \item Optimal control of queueing systems
+    \item Queueing systems
+        \begin{itemize}
+            \item Time-varying Queueing
+            \item Asymptotic Approximations, fluid and diffusion
+            \item Queueing Networks
+        \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Optimal Control of Queueing System}
+There are three major streams of control problem constructed for a queueing system. Markov decision pocesses, which solves the exact solution to the original stochastic optimization problem. Brwonian control problem. Last but not the least, which is also the focus of this dissertation, the fluid control problem.
+\begin{itemize}
+    \item MDP: \citet{george2001dynamic} (see also \citet{wijngaard1986forward},\citet{wijngaard2000forward} and \citet{jo1989lagrangian}), \citet{stidham1985optimal}, \citet{stidham1993survey} (a survey of Markov decision model for the control of networks), \citet{weber1987optimal}, \citet{sennott2009stochastic} (a book considers a wide vari- ety of dynamic control problems associated with queueing models, and it develops a general computational method for such problems), \citet{ata2006dynamic}
+    \item Fluid Control
+    \item Brownian Control: \citet{ghamami2013dynamic}
+\end{itemize}
+\begin{enumerate}
+\item 
+\item \citet{harrison1990scheduling}
+\item \citet{bassamboo2006design}
+\item \citet{ward2008asymptotically}
+\item \citet{harrison2000brownian}
+\item \citet{harrison1999heavy}
+\item \citet{bauerle2002optimal}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Service Systems Analyzed by Queueing Theory}
+We look into three most relevant industries, sharing-economy, health-care and manufacturing. We also add a few more papers on block-chain analysis with queueing theory. See survey \citet{stidham1993survey}.
+\begin{itemize}
+	\item Manufacturing Systems: \citet{buzacott1986queueing}
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Queueing Networks}
+
+
+\begin{itemize}
+	\item Closed Queueing Networks: \citet{gordon1967closed},  \citet{yao1989decentralized}, \citet{buzacott1986queueing}, \citet{kelly2011reversibility} (for background of Queueueing networks)
+	\item Tandem Queueing: \cite{weber1987optimal} (The global optimal control model of series and cycles of networks was
+	studied),
+	\item Other Queuing Networks: \citet{jackson1957networks}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{A Review Adapted from Dr. Liu's Dissertation}
+\subsubsection{Time-varying Queueing Models}
+
+
+\subsubsection{Network Queueing Models}
+\begin{markdown}
+- A First page of summary of variables
+
+---
+
+###Time-varying System
+
+####Time-varying arrival rates
+
+There ought to be some more on specific systems
+
+- 26, provides background for the fact that how time-varying arrival rates, which commonly occurs in application but makes performance analysis difficult.
+- 17
+- 50,53
+- 14, 15, service systems typically have arrival rates that vary significantly over time, and the results dramatically reveal the consequence, e.g., showing how the peak congestion lags behind the peak arrival rate, as discussed for the $M_t/GI/\infty$ stochastic model.
+
+
+
+#### Time-varying staffing (decisions?)
+
+This is about the decisions. Staffing is of course one of the most obvious decision in call-centers. What are the other decisions? production rate, pricing, etc.
+
+#### Time-varying performance functions
+
+
+
+---
+
+### Non-exponential informations
+
+- 79, queueing model in patient flow management 
+- 20, how impatient customer will significantly alter system performance. This translates to how production expiration/ demand abandonment will effect system decisions. It proposed MSHT ED and QD regimes.
+- 20, 81, customer abandonment is now recognized as an important feature in service systems. Review that production expiration and demand abandonment is an important feature. Splitting is an important feature we considered in the model. 
+- 7, service system often do have non-exponential service and patience distributions. (_need to specify in each cases?_ __Due to the complexity in each practical problem, we need to balance problem praticality and model generality__)  
+- 46,76,77,81 shows that the patience distribution beyond its mean has a significant impact. However, 76, 77 also showns that the steady-state performance in the stationary $G/GI/s+GI$ model is relatively insensitive to the service-time cdf beyond its mean.
+- In Dr. Liu's 2012 paper, they have shwon the importance of information beyond its mean can have a significant impact as well as for the transient performance. 
+- 31, an example of application of the result in Dr. Liu's 2012 paper(chapter 2), create new effective real-time delay predictors for arriving customers in a service system with time-varying arrivals.
+
+#### Classical Erlang Models
+
+Since we have a lot erlang assumptions in two of my models. It is important to review that and __clarify that due to the complexity of our model and the complexity of the associated optimization problem we used Erlang model.__ 
+
+
+
+#### Non-exponential 
+
+Specifically in the car-sharing project, I need to justify the importance of including _non-exponential_ and *distributional* information.
+
+- Cathy Xia Paper, the differences is that we considered a new problem and included distributional information
+
+---
+
+### Fluid Model
+
+To discuss the fluid approximation, one needs to discuss both the single-server and many-server model. The former one is referred to as the _conventional_ heavy traffic regime. The many-server model, from a math point of view, has _infinitely_ many servers in the pre-limit as system _scale_ increases to infinity. 
+
+- In his third chapter, he mentioned the following. _Fluid model is tractable, we are providing the basis for creating a performance-analysis tool for large-scale service systems, like the Queueing Network Analyzer(QNA) in 73 and 8.  Algorithms based on performance formulas are appealing to supplement and complement computer simulation, because the models can be created and solved much more quickly. Thus they can be applied quickly in what if studies. They also can be efficiently embedded in optimization algorithms to systematical determine design and control parameters to meet performance objectives._ Therefore, my work follows closely to the development of time-varying fluid model and furthermore to incorporate it in a optimization problem/ optimal control problem.
+
+#### Application of Deterministic Fluid Models
+
+- 57, insight of fluid model as a legitimate model itself
+- 54, 29, shown a long history of applying deterministic fluid models 
+- __In this thesis, we primarily do not concern with establishing limits for sequences of scaled queueing processes. We directly concerned with the fluid model itself. __
+- We do not concern establishing limits. We construct stochastic optimization problem and use fluid model as an approximation. More importantly, we show the stochastic optimization problem equipped with fluid optimal control is a lower bound and asymptotically optimal
+
+#### Heavy-traffic single-server 
+
+- 74 Heavy-traffic fluid and diffusion approximation become helpful. Due to the fact that we used single-server fluid model. We may need to dig a little deeper. Specifically, $\cdot/G_t/\infty$,  $\cdot/M_t/1$, double-ended queue model, $M_t/M/1$. 
+- 74 has been mentioned at the very start as an extensive account
+- 38, introduced the $GI/GI/1$ model. 
+- __Who developed the $M_t/M/1$ mode?__   Dr. Liu in his 2012 paper. __Need to check that!__ 
+- 5,32 extended the conventional heavy-traffic to queues with multiple servers. Furthermore, in 32 the convergence of the entire queue-length process is established. 
+
+#### Heavy-traffic many-server
+
+_Do I need to discuss the differences between my policy and the QED regmine?_ Although these two different policies are proposed under different framework.
+
+- 28, Halfin and Whitt regime 
+- 20, extened Halfin and Whitt regime to Erlang A model
+- 77
+- 20,46,55,56, Fluid model arises in MSHT 
+
+#### Heavy-traffic many-server with time-varying rate
+
+- 46, 47, 48,  a theoretical basis for the MSHT limits for models with time-varying arrival rates and staffing 
+- Dr. Liu's 2012 paper and the one he has on $G_t/GI/s_t+GI$ 
+
+
+
+### Queueing Network (as is mentioned by Dr. Cao)
+
+Claim that single queue is apparently not capturing all cases. There are problems can be modeled with different structures. Need to review at least, _double-ended queue_, _queueing network_, and _tandem queue_. 
+
+- 10, Jackson Network (That is all that he reviewed. Maybe we could review a bit more, the _V_, _reverse V_ and the _N_ model and pay close attention if any control problem is done.)
+- 
+
+#### Transient and Asymptotic Performance
+
+Isn't transient in our definition the same as time-varying. And I think we should separate the review on transient and asymptotic performance. 
+
+- 46-48, 56, 58, analyzed transient dynamics, fluid and diffusion approximation.
+- Specifically, 58, $M_t/M_t/k_t+M_t$ queue is analyzed
+- 56, MSHT limits or infinite-server queue
+- 3, for a system with constant parameters, we care about the steady-state models ad they provide evaluation of the average system costs and revenue.
+
+----
+
+#### Introduction to Chapter 2
+
+- 56, MSHT limit for the infinite server model
+- 45, MSHT limit for the  model with general service distribution
+- 36, 37, 56, 62, new limits in Chapter 5 are consistent with recent 
+
+---
+
+### A network Generalization
+
+#### Dr. Liu's network review 
+
+- Need to check with Dr. Liu what does his chapter three turns into. The difference between his model and mine are  the following: _closed network_ and _routing_. The first-come first-server can be regard as a proportional routing, however we have shown that it is under some assumptions not always the best policy to implement.
+- 50, 
+
+#### Mine 
+
+I should include a slightly more comprehensive review, including the _V model_, _reverse V model_, and _N model_, _tandem model_.
+\end{markdown}
